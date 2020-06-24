@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cosmo Cruise - Accueil</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/reservations.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html">
+					<img src="images\cosmocruise_logo.png" alt="Cosmo Cruise logo">
+                </a>
+				<nav>
+					<ul class="menu">
+						<li><a href="quisommesnous.html">Qui Sommes-Nous ?</a></li>
+						<li><a href="flotte.html">Notre flotte</a></li>
+						<li><a href="reservations.html">Réserver</a></li>
+						<li><a href="reglement.html">Réglement</a></li>
+						<li><a href="partenaires.html">Nos Partenaires</a></li>
+						<li><a href="activités.html">Nos Activités</a></li>
+					</ul>
+				</nav>
+            </header>
+            
+            <main class = "main">
+
+				<div class="cform" id="f">
+
+                    <div class="titre">
+                        <h1>Reservation</h1>
+                    </div>
+                    
+					<form class="form" id="ff">
+						<div class="line">
+							<input type="text" id="fname" name="prénom" placeholder="votre prénom" required>
+							<input type="text" id="name" name="nom" placeholder="votre nom" required>
+						</div>
+
+						<div class="line">
+							<input type="email" id="mail" name="email" placeholder="votre e-mail" pattern ="" required>
+						</div>
+
+						<div class="line">
+							<button id = "aretour" onclick="showRetour()">Aller retour</button>
+							<button id = "asimple" onclick="hideRetour()">Aller simple</button>
+						</div>
+
+						<div class="line">
+							<select class="selectc" name="start" id="start">
+								<option value="">-planète de départ-</option>
+								<option value="Mercure">Mercure</option>
+								<option value="Vénus">Vénus</option>
+								<option value="La Terre">Terre</option>
+								<option value="Mars">Mars</option>
+								<option value="Jupiter">Jupiter</option>
+								<option value="Saturne">Saturne</option>
+								<option value="Uranus">Uranus</option>
+								<option value="Neptune">Neptune</option>
+							</select>
+
+							<select class="selectc" name="end" id="end">
+								<option value="">-planète d'arrivée-</option>
+								<option value="Mercure">Mercure</option>
+								<option value="Vénus">Vénus</option>
+								<option value="La Terre">Terre</option>
+								<option value="Mars">Mars</option>
+								<option value="Jupiter">Jupiter</option>
+								<option value="Saturne">Saturne</option>
+								<option value="Uranus">Uranus</option>
+								<option value="Neptune">Neptune</option>
+							</select>
+						</div>
+
+						<div class="line">
+
+							<div id="départ">
+								<label for="go">Date de départ : </label>
+								<input onclick="resetRetour()" type="date" id="go_date" name="go" value="" min="2020-07-01" max="3000-12-31" required>
+							</div>
+
+							<div id="retour">
+								<label for="go">Date de retour :</label>
+								<input onclick="changeMin()" type="date" id="goback_date" name="goback" value="" min="2020-07-01" max="3000-12-31" required>
+							</div>
+
+						</div>
+
+						<div class="line">
+							<select class="selectc" name="shipss" id="ships">
+								<option id="z" value="">-vaisseaux disponibles-</option>
+								<option id="a" value="Axiom">Axiom</option>
+								<option id="a" value="USS Enterprise NCC-1701">USS Enterprise NCC-1701</option>
+								<option id="a" value="Endurance">Endurance</option>	
+								<option id="a" value="SSV Normandy SR-1">SSV Normandy SR-1</option>
+
+								<option id="b" value="Star Destroyer">Star Destroyer</option>
+								<option id="b" value="Battlestar Galactica">Battlestar Galactica</option>
+								<option id="b" value="Millenium Falcon">Millenium Falcon</option>
+								<option id="b" value="USSC Discovery One">USSC Discovery One</option>
+								
+								<option id="c" value="Tardis">Tardis</option>
+								<option id="c" value="USCSS Nostromo">USCSS Nostromo</option>	
+								<option id="c" value="Planet Express">Planet Express</option>
+								<option id="c" value="Arcadia">Arcadia</option>
+							</select>
+						</div>
+
+						<div class="line">
+							<button id = "reserverr" onclick="Reserver()">Réserver !</button>
+						</div>
+
+						<div class="line">
+							<button class="lastb" id = "pay" onclick="payer()">Payer le total</button>
+							<button class="lastb" id = "del" onclick="deleteRes()">Supprimer le total</button>
+						</div>
+
+					</form>
+
+					<div id="the_res">
+					</div>
+
+				</div>
+
+			</main>
+
+			
+			<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<div class="icons">
+						<a style="text-decoration:none;" href="https://twitter.com/home?lang=fr"> <img class="icon" src="images/twi.png" alt="Twitter"> </a>
+						<a style="text-decoration:none;" href="https://www.facebook.com/"> </a><img class="icon" src="images/fb.png" alt="Facebook"> </a>
+						<a style="text-decoration:none;" href="https://www.instagram.com/cosmo_cruise/"> </a><img class="icon" src="images/insta.png" alt="Instagram"> </a>
+						<a style="text-decoration:none;" href="https://fr.linkedin.com/"> </a><img class="icon" src="images/link.png" alt="Linkedin"> </a>
+					</div>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; Cosmo Cruise</li><li><a href="cond.html">Conditions d'utilisation</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+        <script src="assets/js/reservations.js"></script>
+	</body>
+</html>
